@@ -1,3 +1,11 @@
 language: node_js
 node_js:
   - "node"
+script:
+  - "npm run lint"
+  - "npm run test"
+deploy:
+  provider: heroku
+  api_key:
+  secure: 45d9608b-ad08-4137-bebd-f495ef2c8596
+  app: testing-thinh
